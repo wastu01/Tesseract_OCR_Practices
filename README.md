@@ -1,0 +1,2 @@
+# Tesseract_OCR_Practices
+ Tesseract_OCR_Practices 辨識圖片文字實作
