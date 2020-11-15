@@ -30,5 +30,6 @@ https://github.com/madmaze/pytesseract
 
 https://sourceforge.net/projects/vietocr/files/jTessBoxEditor/
 
-
+完整筆記：
+https://hackmd.io/@DCT/Tesseract-OCR-文字辨識
 
