@@ -28,7 +28,7 @@ def get_bin_table(threshold=95):
 
 def main():
     # 轉灰度 level >>
-    img = Image.open('img/DIY/.png')
+    img = Image.open('img/DIY/healthpaper.jpg')
     # print('image mode : ', img.mode)
     # print(img.getpixel((0, 0)))
     # co = img.getcolors()
@@ -57,23 +57,23 @@ def main():
     #     print()
     #     start += step
 
-    binary.save('output/DIY/1.tiff')
+    # binary.save('output/DIY/1.tiff')
 
     # imgry.show() 基礎查看
 
     # matplotlib 進階顯示圖片設定
-
+    # , figsize = (1.67, 1.04)
     plt.figure("img")
-    plt.figure(num=1, figsize=(1.67, 1.04))
+    plt.figure(num=1)
     plt.axis('off')  # 不顯示座標軸
-    plt.imshow(img)
+    # plt.imshow(img)
     # plt.show()
-    plt.imshow(imgry, cmap='Greys_r')
+    # plt.imshow(imgry, cmap='Greys_r')
     plt.title('GRAYMODE')
-    plt.show()
-    text = pytesseract.image_to_string(binary, lang='eng', config='--psm 6')
+    # plt.show()
+    text = pytesseract.image_to_string(binary, lang='chi_tra+eng')
     print(text)
-    f = open('output/DIY/hqkJ.txt', 'w')
+    f = open('output/DIY/healthpaper.txt', 'w')
     f.write(text)
     f.close()
     plt.imshow(binary, cmap='Greys_r')
